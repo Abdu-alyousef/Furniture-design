@@ -136,12 +136,30 @@ body {
 
 .story__text {
   font-size: 1.5rem;
-  font-style: italic;
   margin-bottom: 4rem; }
 
-.kitchens {
-  background-color: #101d2c;
-  grid-column: center-start / center-end; }
+.services {
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.service {
+  background-color: #f9f7f6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 3rem;
+  text-align: center; }
+  .service__img {
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    z-index: 1; }
+  .service__name {
+    grid-column: 2 / -2; }
+  .service__btn {
+    grid-column: 1 / -1; }
 
 .gallery {
   background-color: #c69963;
