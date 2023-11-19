@@ -1,10 +1,10 @@
-.footer {
+.footer--list {
     background-color: $color-secondary;
     grid-column: full-start / full-end;
     padding: 8rem;
 }
 
-.footer__b{
+.footer {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -12,9 +12,9 @@
     align-items: center;
 
 
-    
-    .footer__link:link,
-    .footer__link:visited {
+
+    &__link:link,
+    &__link:visited {
         font-size: 1.4rem;
         color: #fff;
         text-decoration: none;
@@ -26,17 +26,18 @@
         cursor: pointer;
         transition: all .2s;
     }
-   
 
-    .footer__link:hover,
-    .footer__link:active {
+
+    &__link:hover,
+    &__link:active {
         background-color: rgba(#fff, .05);
-        transform: translateY(-2px);
+        transform: translateY(-1.5px);
     }
 }
 
 
-.terms {
+
+.term {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -46,19 +47,21 @@
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
-}
 
 
-.term__link:link,
-.term__link:visited {
-  color: grey;
-  text-decoration: none;
-  transition: all .2s;
-}
 
-.term__link:hover,
-.term__link:active {
-    color: #fff;
+    &__link:link,
+    &__link:visited {
+        color: grey;
+        text-decoration: none;
+        transition: all .2s;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: #fff;
+    }
+
 }
 
 .copyright {
@@ -67,4 +70,3 @@
     text-align: center;
     margin-top: 3rem;
 }
-
