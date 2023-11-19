@@ -29,5 +29,18 @@
 }
 
 @media only screen and (max-width: 480px) {
+
+    .feature {
+        
+        &__text {
+            font-size: 1.3;
+        }
+
+        &__icon {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
    
   }
+
+}

@@ -66,3 +66,13 @@
     
 }
 
+@media only screen and (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+    .logo {
+        &__head {
+            font-size: 1.3rem;
+        }
+    }
+  }
