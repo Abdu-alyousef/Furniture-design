@@ -23,7 +23,7 @@ body {
 @media only screen and (max-width: 480px) {
   .container {
     display: grid;
-    grid-template-rows: 7.5rem 80vh 25vh min-content 40vw repeat(2, min-content);
+    grid-template-rows: 7.5rem repeat(3, min-content) 40vw repeat(2, min-content);
     grid-template-columns: [sidebar-start] 0rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end] 0rem; } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
@@ -146,21 +146,13 @@ body {
 
 @media only screen and (max-width: 480px) {
   .header {
-    grid-column: full-start / full-end;
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; }
-    .header__btn {
-      font-size: 1.3rem;
-      justify-self: center;
-      align-self: center; }
+    grid-column: full-start / full-end; }
     .header__seenon-text {
-      display: flex;
-      text-align: center;
+      grid-template-columns: 1fr;
       font-size: 1.3rem;
-      color: #fff; } }
+      text-align: center; }
+    .header__btn {
+      justify-self: center; } }
 
 .goals {
   background-color: #101d2c;
@@ -188,7 +180,7 @@ body {
 
 .features {
   grid-column: center-start / center-end;
-  margin: 15rem 0;
+  margin: 5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
@@ -258,6 +250,9 @@ body {
   .story__text {
     font-size: 1.3rem; }
   .story__btn {
+    justify-self: center; }
+  .story__head {
+    font-size: 2.5rem;
     justify-self: center; } }
 
 .services {
@@ -286,6 +281,12 @@ body {
     padding: 1.5rem; }
   .service__btn {
     grid-column: 1 / -1; }
+
+@media only screen and (max-width: 480px) {
+  .services {
+    grid-column: full-start / full-end;
+    margin-left: 2rem;
+    margin-right: 2rem; } }
 
 .footer--list {
   background-color: #101d2c;
