@@ -20,6 +20,12 @@ body {
   grid-template-rows: 7.5rem 80vh min-content 40vw repeat(2, min-content);
   grid-template-columns: [sidebar-start] 5rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end] 5rem; }
 
+@media only screen and (max-width: 480px) {
+  .container {
+    display: grid;
+    grid-template-rows: 7.5rem 80vh min-content 40vw repeat(2, min-content);
+    grid-template-columns: [sidebar-start] 0rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end] 0rem; } }
+
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Inter", sans-serif;
   font-weight: 400; }
@@ -132,6 +138,24 @@ body {
     font-size: 1.6rem;
     color: #fff; }
 
+@media only screen and (max-width: 480px) {
+  .header {
+    grid-column: full-start / full-end;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .header__btn {
+      font-size: 1.3rem;
+      justify-self: center;
+      align-self: center; }
+    .header__seenon-text {
+      display: flex;
+      text-align: center;
+      font-size: 1.3rem;
+      color: #fff; } }
+
 .goals {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end;
@@ -142,6 +166,19 @@ body {
   justify-items: center;
   grid-row-gap: 5rem;
   text-transform: uppercase; }
+
+@media only screen and (max-width: 480px) {
+  .goals {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(3, 8rem);
+    grid-row-gap: 3rem; }
+    .goals__head {
+      grid-column: 1 / -1;
+      font-size: 1.3rem; }
+    .goals__text {
+      font-size: 1.3rem;
+      text-align: center; } }
 
 .features {
   grid-column: center-start / center-end;

@@ -12,3 +12,23 @@
 
 
 }
+
+@media only screen and (max-width: 480px) {
+.goals {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(3, 8rem);
+    grid-row-gap: 3rem;
+
+
+    &__head {
+        grid-column: 1 / -1;
+        font-size: 1.3rem;
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+}
+  }

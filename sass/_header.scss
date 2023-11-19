@@ -25,4 +25,36 @@
 
     
     }
+  
+    
     }
+
+    @media only screen and (max-width: 480px) {
+      
+        .header {
+            grid-column: full-start / full-end;
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        
+            &__btn {
+                font-size: 1.3rem;
+                justify-self: center;
+                align-self: center;
+                
+            }
+        
+            &__seenon-text {
+                display: flex;
+                text-align: center;
+                font-size: 1.3rem;
+                color: #fff;
+        
+            
+            }
+          
+            
+            }
+      }
