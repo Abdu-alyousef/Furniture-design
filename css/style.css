@@ -73,15 +73,30 @@ body {
 .navbar {
   background-color: #c69963;
   grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  align-items: center; }
+
+.logo {
   display: flex;
-  justify-content: space-between; }
-  .navbar__main--nav {
-    flex: end;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    list-style-type: none; }
-  .navbar__link:link, .navbar__link:visited {
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem; }
+  .logo__img {
+    width: 5rem; }
+  .logo__head {
+    color: #fff; }
+  .logo span {
+    font-size: 1rem; }
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style-type: none; }
+  .nav__link:link, .nav__link:visited {
     font-size: 1.4rem;
     color: #fff;
     text-decoration: none;
@@ -92,17 +107,41 @@ body {
     display: block;
     cursor: pointer;
     transition: all .2s; }
-  .navbar__link:hover, .navbar__link:active {
+  .nav__link:hover, .nav__link:active {
     background-color: rgba(255, 255, 255, 0.05);
     transform: translateY(-1.5px); }
 
 .header {
   background-color: #54483A;
-  grid-column: full-start / col-end 6; }
+  grid-column: full-start / col-end 6;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-rows: min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 3rem;
+  justify-content: center; }
+  .header__btn {
+    align-self: start;
+    justify-self: start; }
+  .header__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #fff; }
 
-.customers {
+.goals {
   background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  justify-items: center;
+  grid-row-gap: 5rem;
+  text-transform: uppercase; }
 
 .features {
   grid-column: center-start / center-end;
