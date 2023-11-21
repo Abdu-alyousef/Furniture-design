@@ -1,14 +1,11 @@
 {
-  "name": "seitonswebpage",
+  "name": "dreamhome",
   "version": "1.0.0",
-  "description": "Landing page for seitonsWebPage",
+  "description": "Find your dream Home",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
-  "author": "Abdu-Alyousef",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^9.0.0"
-  }
+  "author": "Abdu Alyousef",
+  "license": "ISC"
 }
